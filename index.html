@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- league spartan font -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/png">
+</head>
+<body>
+    <div class="container">
+        
+            <h2 class="title">PASSWORD GENERATOR</h2>
+            <div class="display_container">
+                <input class="display" placeholder="Generated Password" readonly data-passwordDisplay>
+                <!-- copy button -->
+                <button class="cpyBtn" data-copy>
+                    <span class="tooltip" data-copyMsg></span>
+                    <img src="./assets/copy.svg" alt="copy" width="23" height="23">
+                </button>
+            </div>
+
+            <div class="input-container">
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p id="lengthNumber">0</p>               
+                </div>
+                <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+
+                <!-- checkboxes -->
+                <div class="checkbox-wrapper-2">
+                    
+                    <label for="uppercase">Include Uppercase Letters</label>
+                    <input type="checkbox" id="uppercase" class="sc-gJwTLC ikxBAC" data-uppercaseCheck>
+                </div>
+                <div class="checkbox-wrapper-2">
+                    
+                    <label for="lowercase">Include Lowercase Letters</label>
+                    <input type="checkbox" id="lowercase" class="sc-gJwTLC ikxBAC" data-lowercaseCheck>
+                </div>
+                <div class="checkbox-wrapper-2">
+                    
+                    <label for="numbers">Include Numbers</label>
+                    <input type="checkbox" id="numbers" class="sc-gJwTLC ikxBAC" data-numbersCheck>
+                </div>
+                <div class="checkbox-wrapper-2">
+                    
+                    <label for="symbols">Include Symbols</label>  
+                    <input type="checkbox" id="symbols" class="sc-gJwTLC ikxBAC" data-symbolsCheck>
+                </div>
+                
+                <!-- strength-section -->
+                <div class="strength-container">
+                    <p>Strength</p>
+                    <div data-strengthIndicator></div>
+                </div>
+
+                <button class="generateButton">Generate Password</button>
+            </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
